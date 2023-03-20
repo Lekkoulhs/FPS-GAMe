@@ -184,9 +184,16 @@ public class ProjectileScript : MonoBehaviour {
 				//Toggle the isHit bool on the target object
 				hit.gameObject.GetComponent<TargetScript>().isHit = true;
 			}
+            if (hit.GetComponent<Collider>().tag == "Enemy" &&
+                    hit.GetComponent<Enemy>().isHit == false)
+            {
 
-			//If the projectile explosion hits barrels with the tag "ExplosiveBarrel"
-			if (hit.transform.tag == "ExplosiveBarrel") {
+                //Toggle the isHit bool on the Enemy object
+                hit.gameObject.GetComponent<Enemy>().isHit = true;
+            }
+
+            //If the projectile explosion hits barrels with the tag "ExplosiveBarrel"
+            if (hit.transform.tag == "ExplosiveBarrel") {
 				
 				//Toggle the explode bool on the explosive barrel object
 				hit.transform.gameObject.GetComponent<ExplosiveBarrelScript>().explode = true;
