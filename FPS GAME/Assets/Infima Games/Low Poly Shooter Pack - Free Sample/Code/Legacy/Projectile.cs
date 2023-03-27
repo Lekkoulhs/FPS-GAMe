@@ -119,9 +119,19 @@ public class Projectile : MonoBehaviour {
 			//Destroy bullet object
 			Destroy(gameObject);
 		}
-			
-		//If bullet collides with "ExplosiveBarrel" tag
-		if (collision.transform.tag == "ExplosiveBarrel") 
+
+        //If bullet collides with "enemy" tag
+        if (collision.transform.tag == "Enemy")
+        {
+            //Toggle "isHit" on target object
+            collision.transform.gameObject.GetComponent
+                <Enemy>().isHit = true;
+            //Destroy bullet object
+            Destroy(gameObject);
+        }
+
+        //If bullet collides with "ExplosiveBarrel" tag
+        if (collision.transform.tag == "ExplosiveBarrel") 
 		{
 			//Toggle "explode" on explosive barrel object
 			collision.transform.gameObject.GetComponent
