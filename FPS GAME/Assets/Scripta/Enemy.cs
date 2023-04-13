@@ -10,13 +10,16 @@ public class Enemy : MonoBehaviour
     public bool isHit = false;
 
     [Header("Customizable Options")]
-
+    Animator anim;
     public float Health;
 
     public float Damage;
     public GameObject new_gameobject;
 
-
+    private void Awake()
+    {
+        anim= GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,8 +32,9 @@ public class Enemy : MonoBehaviour
 
         if (Health <= 0)
         {
+            anim.SetBool("IsDead", true);
             //code death animation 
-            Destroy(new_gameobject);
+           // Destroy(new_gameobject);
         }
     }
 }
