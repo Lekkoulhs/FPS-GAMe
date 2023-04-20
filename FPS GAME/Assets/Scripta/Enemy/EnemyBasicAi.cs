@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyBasicAi : MonoBehaviour
+
+
 {
     private Animator anim;
     private NavMeshAgent pathfinder;
@@ -11,7 +13,7 @@ public class EnemyBasicAi : MonoBehaviour
 
     void Start()
     {
-        anim= GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         pathfinder = GetComponent<NavMeshAgent>();
         target = GameObject.Find("Player").transform;
 
