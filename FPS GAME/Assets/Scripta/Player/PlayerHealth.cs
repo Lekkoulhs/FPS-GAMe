@@ -4,41 +4,57 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
-    public int currentHealth;
+    public int maxHeath = 100;
+    public int currHealth;
+    public int damageTaken = 0;
+    public Animator anim;
 
-    private void Awake()
+    private float timer = 2f;
+
+    private void Start()
     {
-        currentHealth = startingHealth;
+        currHealth = maxHeath;
     }
 
-    public void TakeDamage(int damageAmount)
+    private void OnCollisionEnter(Collision collision)
     {
-        currentHealth -= damageAmount;
-
-        if (currentHealth <= 0)
+        /*if (collision.gameObject.tag == "Enemy")
         {
+            anim.SetBool("IsAttacking", true);
+            TakeDamage();
+        }*/
+
+        timer = 2f;
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                TakeDamage ();
+                timer = 2f;
+            }
+            //anim.SetBool("IsAttacking", true);
+            //TakeDamage();
+        }
+    }
+
+    public void TakeDamage()
+    {
+        currHealth -= damageTaken;
+        if (currHealth <= 0) {
             Die();
         }
     }
 
-    private void Die()
+    public void Die()
     {
-        Debug.Log("Player has died!");
-        // Restart the level or show a game over screen.
-    }
+        //code what death looks like 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Enemy"))
-        {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                TakeDamage(enemy.attackDamage);
-                Debug.Log("Player has taken " + enemy.Damage + " damage from a zombie!");
-            }
-        }
+        Destroy(gameObject);
     }
 }
 

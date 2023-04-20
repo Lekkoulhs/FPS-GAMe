@@ -7,9 +7,9 @@ public class EnemyBasicAi : MonoBehaviour
 
 
 {
-    private Animator anim;
+    public Animator anim;
     private NavMeshAgent pathfinder;
-    private Transform target;
+    public Transform target;
 
     void Start()
     {
