@@ -35,10 +35,12 @@ public class PlayerHealth : MonoBehaviour
             if (timer < 0)
             {
                 TakeDamage ();
+
+                anim.SetBool("IsAttacking", true);
+                 
                 timer = 2f;
             }
-            //anim.SetBool("IsAttacking", true);
-            //TakeDamage();
+            
         }
     }
 
