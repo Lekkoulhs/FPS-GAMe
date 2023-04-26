@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Died.unity
-    guid: 625d69ba057f6d845b10c294c4c7593f
-  - enabled: 1
     path: Assets/Scenes/Thxforplaying.unity
     guid: b14aab6ba700838429fe7d60c3d8daeb
+  - enabled: 1
+    path: Assets/Scenes/Died.unity
+    guid: 74213f4934d1f9c46834d46e4e30db55
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
       type: 2}

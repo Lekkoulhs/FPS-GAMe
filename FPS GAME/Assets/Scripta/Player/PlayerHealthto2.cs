@@ -1,10 +1,16 @@
+using InfimaGames.LowPolyShooterPack;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerHealthto2 : MonoBehaviour
 {
+
+    public Character character;
+
     public int maxHealth = 100; // Maximum amount of health the player can have
     public int currentHealth; // Current amount of health the player has
 
@@ -27,7 +33,11 @@ public class PlayerHealthto2 : MonoBehaviour
     {
         // Handle player death
         // For example, you could play a death animation or respawn the player
+        
+        
+        character.cursorLocked = false;
+        character.UpdateCursorState();
         SceneManager.LoadScene("Died");
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

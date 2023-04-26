@@ -21,27 +21,17 @@ public class Enemy : MonoBehaviour
     public float Damage;
     public GameObject new_gameobject;
 
-    public int enemieskilled = 0;
-    public int enemiestokill = 2;
+    //public ScoreNextLvl sc;
     //public NavMeshAgent nav;
 
-   
-    private void Start()
-    {
-        //ScoreNextLvl S = gameObject.GetComponent<ScoreNextLvl>();
-
-    }
-
     private float timer = 5f;
+    private bool isDead= false;
 
     // Update is called once per frame
     void Update()
     {
 
-        if (enemieskilled >= enemiestokill)
-        {
-            ChangeScene();
-        }
+       
 
         if (isHit == true)
         {
@@ -50,17 +40,18 @@ public class Enemy : MonoBehaviour
 
         }
 
-        if (Health <= 0)
+        if (!isDead &&Health <= 0)
         {
             
-           
+           isDead= true;
             new_gameobject.GetComponent<NavMeshAgent>().isStopped= true;
             anim.SetBool("IsDead", true);
-            
+            ScoreNextLvl.EnemyCounter();
+
             timer -= Time.deltaTime;
             if (timer<0)
             {
-                enemieskilled++;
+                
                 Destroy(new_gameobject);
                 
             }
@@ -70,8 +61,9 @@ public class Enemy : MonoBehaviour
 
         
     }
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene("Level2");
+
+    public void die() { 
+    
     }
+  
 }

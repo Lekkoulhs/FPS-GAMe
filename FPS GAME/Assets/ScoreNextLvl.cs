@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ScoreNextLvl : MonoBehaviour
 {
-   /* public int enemieskilled = 0;
+    public static int enemieskilled = 0;
     public int enemiestokill = 2;
+    public string NxtLvl;
 
     private void Update()
     {
@@ -15,12 +16,12 @@ public class ScoreNextLvl : MonoBehaviour
             ChangeScene();
         }
     }
-    public void EnemyCounter()
+    public static void EnemyCounter()
     {
         enemieskilled++;
     }
     public void ChangeScene()
     {
-        SceneManager.LoadScene("Level2");
-    }*/
+        SceneManager.LoadScene(NxtLvl);
+    }
 }

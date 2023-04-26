@@ -147,7 +147,7 @@ namespace InfimaGames.LowPolyShooterPack
 		/// <summary>
 		/// True if the game cursor is locked! Used when pressing "Escape" to allow developers to more easily access the editor.
 		/// </summary>
-		private bool cursorLocked;
+		public bool cursorLocked;
 
 		#endregion
 
@@ -386,7 +386,7 @@ namespace InfimaGames.LowPolyShooterPack
 		/// <summary>
 		/// Updates the cursor state based on the value of the cursorLocked variable.
 		/// </summary>
-		private void UpdateCursorState()
+		public void UpdateCursorState()
 		{
 			//Update cursor visibility.
 			Cursor.visible = !cursorLocked;
@@ -843,8 +843,13 @@ namespace InfimaGames.LowPolyShooterPack
 			holstering = false;
 		}
 
-		#endregion
+        public static implicit operator Character(bool v)
+        {
+            throw new NotImplementedException();
+        }
 
-		#endregion
-	}
+        #endregion
+
+        #endregion
+    }
 }
