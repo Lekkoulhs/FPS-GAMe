@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
     [Header("Customizable Options")]
 
     public Animator anim;
-    public Character character;
+   //   public Character character;
 
     public float Health;
     public int attackDamage=10;
@@ -48,8 +48,8 @@ public class Enemy : MonoBehaviour
            isDead= true;
             new_gameobject.GetComponent<NavMeshAgent>().isStopped= true;
             anim.SetBool("IsDead", true);
-            character.cursorLocked = false;
-            character.UpdateCursorState();
+           /* character.cursorLocked = false;
+            character.UpdateCursorState();*/
             ScoreNextLvl.EnemyCounter();
 
             timer -= Time.deltaTime;
