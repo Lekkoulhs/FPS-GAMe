@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
-using InfimaGames.LowPolyShooterPack;
 
 public class Enemy : MonoBehaviour
 
@@ -21,19 +20,16 @@ public class Enemy : MonoBehaviour
     public float Health;
     public int attackDamage=10;
     public float Damage;
-    public GameObject new_gameobject;
+    public GameObject Enemyz;
 
-    //public ScoreNextLvl sc;
     //public NavMeshAgent nav;
 
-    private float timer = 5f;
-    private bool isDead= false;
+    public float timer = 5f;
+    public bool isDead= false;
 
     // Update is called once per frame
     void Update()
     {
-
-       
 
         if (isHit == true)
         {
@@ -42,32 +38,75 @@ public class Enemy : MonoBehaviour
 
         }
 
-        if (!isDead &&Health <= 0)
+        if (isDead == false && Health <= 0)
         {
+
+            die();
             
-           isDead= true;
-            new_gameobject.GetComponent<NavMeshAgent>().isStopped= true;
-            anim.SetBool("IsDead", true);
-           /* character.cursorLocked = false;
-            character.UpdateCursorState();*/
-            ScoreNextLvl.EnemyCounter();
+            
 
-            timer -= Time.deltaTime;
-            if (timer<0)
-            {
-                
-                Destroy(new_gameobject);
-                
-            }
-            //code death animation 
-            //Destroy(new_gameobject);
         }
-
+        if (isDead == true)
+        {
+            despawn();
+        }
         
     }
 
-    public void die() { 
-    
+    public void die() 
+    {
+         
+        
+        Enemyz.GetComponent<NavMeshAgent>().isStopped = true;
+        anim.SetBool("IsDead", true);
+        setRigidbodyState(true);
+        setColliderState(false);
+        ScoreNextLvl.EnemyCounter();
+        isDead = true;
+       
+
+
+    }
+    public void despawn()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+
+            Destroy(Enemyz);
+
+        }
+
     }
   
+    
+    void setRigidbodyState(bool state)
+    {
+
+        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+
+        foreach (Rigidbody rigidbody in rigidbodies)
+        {
+            rigidbody.isKinematic = state;
+        }
+
+        GetComponent<Rigidbody>().isKinematic = !state;
+
+    }
+
+
+    void setColliderState(bool state)
+    {
+
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = state;
+        }
+
+        GetComponent<Collider>().enabled = !state;
+
+    }
+    
 }

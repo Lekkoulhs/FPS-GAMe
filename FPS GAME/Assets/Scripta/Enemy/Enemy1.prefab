@@ -513,8 +513,7 @@ MonoBehaviour:
   Health: 100
   attackDamage: 10
   Damage: 10
-  new_gameobject: {fileID: 2780099838948611156}
-  s: {fileID: 0}
+  Enemyz: {fileID: 2780099838948611156}
 --- !u!114 &5127771463551055436
 MonoBehaviour:
   m_ObjectHideFlags: 0
