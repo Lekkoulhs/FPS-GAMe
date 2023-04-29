@@ -1,6 +1,7 @@
 using InfimaGames.LowPolyShooterPack;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealthto2 : MonoBehaviour
 {
-
+    public TextMeshProUGUI Healthtext;
     public Character character;
 
     public int maxHealth = 100; // Maximum amount of health the player can have
@@ -17,11 +18,13 @@ public class PlayerHealthto2 : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        Healthtext.text = currentHealth.ToString();
     }
 
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
+        Healthtext.text = currentHealth.ToString();
 
         if (currentHealth <= 0)
         {

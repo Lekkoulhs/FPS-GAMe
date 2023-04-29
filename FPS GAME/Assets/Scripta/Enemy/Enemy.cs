@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using InfimaGames.LowPolyShooterPack;
 
 public class Enemy : MonoBehaviour
 
@@ -25,28 +26,29 @@ public class Enemy : MonoBehaviour
     //public NavMeshAgent nav;
 
     public float timer = 5f;
-    public bool isDead= false;
+    public bool isDeaAd= false;
 
     // Update is called once per frame
     void Update()
     {
 
-        if (isHit == true)
+        if (isHit == true&& isDeaAd == false)
         {
             Health = Health - Damage;
             isHit = false;
 
         }
 
-        if (isDead == false && Health <= 0)
+        if (isDeaAd == false && Health <= 0)
         {
-
+            isDeaAd = true;
             die();
-            
-            
+            //isDeaAd = true;
+
+
 
         }
-        if (isDead == true)
+        if (isDeaAd == true)
         {
             despawn();
         }
@@ -55,21 +57,21 @@ public class Enemy : MonoBehaviour
 
     public void die() 
     {
-         
-        
+
+        ScoreNextLvl.EnemyCounter();
         Enemyz.GetComponent<NavMeshAgent>().isStopped = true;
         anim.SetBool("IsDead", true);
-        setRigidbodyState(true);
+        setRigidbodyState(true) ;
         setColliderState(false);
-        ScoreNextLvl.EnemyCounter();
-        isDead = true;
-       
+        
+        //Destroy(Enemyz, 5);
 
 
     }
     public void despawn()
     {
         timer -= Time.deltaTime;
+        
         if (timer <= 0)
         {
 
