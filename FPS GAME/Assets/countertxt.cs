@@ -6,23 +6,35 @@ using TMPro;
 public class countertxt : MonoBehaviour
 {
     public TextMeshProUGUI scoretext;
+    [SerializeField]
+    public  int zombiesleft;
+    private static countertxt instance;
 
-    public static int zombiesleft = 10;
-
-    private void Start()
+    public static countertxt Instance
     {
-        scoretext.text = "Zombies left to kill " + zombiesleft.ToString();
+        get
+        {
+            if (instance == null) instance = countertxt.FindObjectOfType<countertxt>();
+            return instance;
+        }
+    }
+
+    public void Start()
+    {
+        //scoretext.text = "Zombies left to kill " + zombiesleft.ToString();
     }
 
     public void Update()
     {
 
-        scoretext.text = "Zombies left to kill " + zombiesleft.ToString();
+        
     }
 
-    public static void change()
+    public  void change()
     {
         zombiesleft -= 1;
+        scoretext.text = "Zombies left to kill " + zombiesleft.ToString();
     }
-
 }
+
+

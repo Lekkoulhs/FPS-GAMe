@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
     public void die() 
     {
 
-        ScoreNextLvl.EnemyCounter();
+        ScoreNextLvl.Instance.EnemyCounter();
         Enemyz.GetComponent<NavMeshAgent>().isStopped = true;
         anim.SetBool("IsDead", true);
         setRigidbodyState(true) ;

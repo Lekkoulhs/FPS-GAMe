@@ -6,11 +6,21 @@ using InfimaGames.LowPolyShooterPack;
 
 public class ScoreNextLvl : MonoBehaviour
 {
-    public static int enemieskilled = 0;
+    public  int enemieskilled = 0;
     public int enemiestokill = 2;
     public string NxtLvl;
 
     public Character character;
+    private static ScoreNextLvl instance;
+
+    public static ScoreNextLvl Instance
+    {
+        get
+        {
+            if (instance == null) instance = ScoreNextLvl.FindObjectOfType<ScoreNextLvl>();
+            return instance;
+        }
+    }
 
     private void Update()
     {
@@ -19,9 +29,9 @@ public class ScoreNextLvl : MonoBehaviour
             ChangeScene();
         }
     }
-    public static void EnemyCounter()
+    public  void EnemyCounter()
     {
-        countertxt.change();
+        countertxt.Instance.change();
         enemieskilled++;
     }
     public void ChangeScene()
