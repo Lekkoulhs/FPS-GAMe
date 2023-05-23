@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 538e81a3dd9acdc428c9dcefcbb6f566, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.06984386, g: 0.1394167, b: 0.18613985, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -106,10 +106,10 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.4
     agentHeight: 2
-    agentSlope: 60
-    agentClimb: 0.53
+    agentSlope: 45
+    agentClimb: 0.6
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 0.01
@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 287417882}
   - component: {fileID: 287417881}
   - component: {fileID: 287417880}
+  - component: {fileID: 287417883}
   m_Layer: 0
   m_Name: Door_1
   m_TagString: Untagged
@@ -266,14 +267,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287417878}
-  m_LocalRotation: {x: -0.00000003293792, y: 0.4885217, z: -0.000000018441185, w: 0.8725518}
-  m_LocalPosition: {x: -5.206, y: 1.971, z: -0.082}
+  m_LocalRotation: {x: -0.000000033508442, y: 0.46048877, z: -0.00000001738297, w: 0.8876655}
+  m_LocalPosition: {x: -4.944, y: 1.971, z: -0.108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8610728738540125025}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 58.487, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 54.837, z: 0}
 --- !u!64 &287417880
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ MeshCollider:
   m_GameObject: {fileID: 287417878}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -338,6 +339,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287417878}
   m_Mesh: {fileID: 4300002, guid: 30a37ce794ca1c94192e4d8721b12940, type: 3}
+--- !u!208 &287417883
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287417878}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.05, z: 0.05}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.527, y: -0.90900004, z: 0.028}
+  m_TimeToStationary: 0.5
 --- !u!1 &387762188
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +367,7 @@ GameObject:
   - component: {fileID: 387762192}
   - component: {fileID: 387762191}
   - component: {fileID: 387762190}
+  - component: {fileID: 387762193}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -364,14 +382,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387762188}
-  m_LocalRotation: {x: -0.000000032263607, y: 0.5191403, z: -0.000000019597005, w: 0.8546891}
-  m_LocalPosition: {x: 0.58, y: 1.9714341, z: -0.037}
+  m_LocalRotation: {x: -0.000000031448906, y: 0.55311173, z: -0.000000020879389, w: 0.8331072}
+  m_LocalPosition: {x: 0.605, y: 1.9714341, z: -0.026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 503503125}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 62.549, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 67.162, z: 0}
 --- !u!64 &387762190
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -381,7 +399,7 @@ MeshCollider:
   m_GameObject: {fileID: 387762188}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -436,6 +454,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387762188}
   m_Mesh: {fileID: 4300002, guid: 30a37ce794ca1c94192e4d8721b12940, type: 3}
+--- !u!208 &387762193
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387762188}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.05, z: 0.05}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.527, y: -0.90900004, z: 0.028}
+  m_TimeToStationary: 0.5
 --- !u!1 &435154390
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +690,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.01886791, g: 0.017888915, b: 0.0152189275, a: 1}
   m_Intensity: 0.19
   m_Range: 10
   m_SpotAngle: 30
@@ -902,6 +936,7 @@ GameObject:
   - component: {fileID: 874413019}
   - component: {fileID: 874413018}
   - component: {fileID: 874413017}
+  - component: {fileID: 874413020}
   m_Layer: 0
   m_Name: Door_2
   m_TagString: Untagged
@@ -916,14 +951,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874413015}
-  m_LocalRotation: {x: 2.664535e-15, y: -0.41274703, z: 1.7763566e-15, w: 0.9108457}
-  m_LocalPosition: {x: 2.798, y: 1.97, z: 47.3}
+  m_LocalRotation: {x: 6.217248e-15, y: -0.24491099, z: 1.4210853e-14, w: 0.96954554}
+  m_LocalPosition: {x: 2.84, y: 1.97, z: 47.235}
   m_LocalScale: {x: 1, y: 1, z: 0.88433}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8610728738540125025}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -48.755, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -28.353, z: 0}
 --- !u!64 &874413017
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -933,7 +968,7 @@ MeshCollider:
   m_GameObject: {fileID: 874413015}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -988,6 +1023,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 874413015}
   m_Mesh: {fileID: 4300002, guid: 30a37ce794ca1c94192e4d8721b12940, type: 3}
+--- !u!208 &874413020
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874413015}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 1.05, z: 0.05}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.527, y: -0.90900004, z: 0.028}
+  m_TimeToStationary: 0.5
 --- !u!4 &926357996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4004346039268598, guid: 0f2f9c5303aac26479fc10d223f34183,
@@ -1470,7 +1521,7 @@ MeshCollider:
   m_GameObject: {fileID: 1416927770}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1725,7 +1776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705786741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.068, y: 0.587, z: -0.07}
+  m_LocalPosition: {x: -0, y: 0.587, z: -0.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1799,11 +1850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004346039268598, guid: 0f2f9c5303aac26479fc10d223f34183, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.881179
+      value: -4.88
       objectReference: {fileID: 0}
     - target: {fileID: 4004346039268598, guid: 0f2f9c5303aac26479fc10d223f34183, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.633598
+      value: -13.55
       objectReference: {fileID: 0}
     - target: {fileID: 4004346039268598, guid: 0f2f9c5303aac26479fc10d223f34183, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1905,7 +1956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030237752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: -0, z: 1.25}
+  m_LocalPosition: {x: 0.009, y: -0, z: 0.409}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
