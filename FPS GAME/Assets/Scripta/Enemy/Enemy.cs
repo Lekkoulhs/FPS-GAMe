@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
 
 {
 
-
+    public bool wanttocount = true;
     public bool isHit = false;
 
     [Header("Customizable Options")]
@@ -57,8 +57,10 @@ public class Enemy : MonoBehaviour
 
     public void die() 
     {
-
-        ScoreNextLvl.Instance.EnemyCounter();
+        if (wanttocount == true)
+        {
+            ScoreNextLvl.Instance.EnemyCounter();
+        }
         Enemyz.GetComponent<NavMeshAgent>().isStopped = true;
         anim.SetBool("IsDead", true);
         setRigidbodyState(true) ;

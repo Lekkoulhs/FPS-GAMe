@@ -17,6 +17,7 @@ TagManager:
   - Dirt (Static)
   - Wood
   - Enemy
+  - Inviz
   layers:
   - Default
   - TransparentFX
