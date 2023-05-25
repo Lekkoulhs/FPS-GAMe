@@ -515,6 +515,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf5254a1491cda4aa6814a97deaf1f3, type: 3}
+--- !u!114 &119918533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4076155628040058717, guid: 5cf5254a1491cda4aa6814a97deaf1f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 119918532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedea47162792a74cb9ec77109d20e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &167345527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1228,6 +1240,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: NxtLvl
+      value: Level8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 119918533}
+    - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: enemiestokill
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4009267317592329900, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
