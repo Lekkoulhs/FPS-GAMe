@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4849960536784990000}
   - component: {fileID: 3250834166690910400}
+  - component: {fileID: -7265176884984160240}
   m_Layer: 0
   m_Name: GodP
   m_TagString: Untagged
@@ -47,4 +48,20 @@ MonoBehaviour:
   enemieskilled: 0
   enemiestokill: 10
   NxtLvl: Thxforplaying
+  character: {fileID: 0}
+--- !u!114 &-7265176884984160240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4009267317592329900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf65f60ede4fd646b5c7a7ecfef4628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelDuration: 180
+  timerText: {fileID: 0}
+  NxtLvl: 
   character: {fileID: 0}

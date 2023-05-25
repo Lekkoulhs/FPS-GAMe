@@ -45,4 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 0c0c55d261d864741826015e701cea06, type: 3}
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
+    type: 3}
+  howmanytype1: 0
+  want2types: 0
   delay: 6

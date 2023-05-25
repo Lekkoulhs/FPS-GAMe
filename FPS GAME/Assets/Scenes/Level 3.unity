@@ -3211,7 +3211,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  delay: 6
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
+    type: 3}
+  howmanytype1: 6
+  want2types: 1
+  delay: 9
 --- !u!4 &1367753440
 Transform:
   m_ObjectHideFlags: 0
@@ -4830,7 +4834,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  delay: 6
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
+    type: 3}
+  howmanytype1: 6
+  want2types: 1
+  delay: 9
 --- !u!4 &1773986136
 Transform:
   m_ObjectHideFlags: 0
@@ -5401,7 +5409,7 @@ PrefabInstance:
     - target: {fileID: 4136359339750244775, guid: 5cf5254a1491cda4aa6814a97deaf1f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4136359339750244775, guid: 5cf5254a1491cda4aa6814a97deaf1f3,
         type: 3}
@@ -6138,7 +6146,7 @@ Transform:
   m_Children:
   - {fileID: 548614256}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3215614458509141363
 Transform:
@@ -6309,7 +6317,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  delay: 6
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
+    type: 3}
+  howmanytype1: 6
+  want2types: 1
+  delay: 9
 --- !u!114 &7918753248304807539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6323,7 +6335,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  delay: 6
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
+    type: 3}
+  howmanytype1: 6
+  want2types: 1
+  delay: 9
 --- !u!4 &8340415305710111539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7520998702837643533, guid: a0974c971d7e03d408174bfec18481f9,
