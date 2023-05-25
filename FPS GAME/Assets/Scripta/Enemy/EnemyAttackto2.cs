@@ -7,6 +7,7 @@ public class EnemyAttackto2 : MonoBehaviour
     public int damageAmount = 10; // Amount of damage to deal to player on collision
     public Animator animator; // Reference to the animator component
     private float timer = 2f;
+   
 
     private void OnCollisionEnter(Collision collision)
     {

@@ -15,6 +15,10 @@ public class PlayerHealthto2 : MonoBehaviour
     public int maxHealth = 100; // Maximum amount of health the player can have
     public int currentHealth; // Current amount of health the player has
 
+   
+
+    
+
     private void Start()
     {
         currentHealth = maxHealth;
@@ -35,11 +39,10 @@ public class PlayerHealthto2 : MonoBehaviour
     private void Die()
     {
         // Handle player death
-        // For example, you could play a death animation or respawn the player
-        
-        
+        // For example, you could play a death animation or respawn the playe
         character.cursorLocked = false;
         character.UpdateCursorState();
+        PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Died");
         Destroy(gameObject);
     }

@@ -628,6 +628,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7265176884984160240, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: NxtLvl
+      value: Level 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7265176884984160240, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 586322576}
+    - target: {fileID: -7265176884984160240, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: timerText
+      value: 
+      objectReference: {fileID: 1938949579}
     - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
       propertyPath: NxtLvl
@@ -705,28 +720,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d6c56beeb071d44b90ab6e7897dbb67, type: 3}
---- !u!1 &226557061 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4009267317592329900, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
-    type: 3}
-  m_PrefabInstance: {fileID: 226557060}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &226557062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226557061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf65f60ede4fd646b5c7a7ecfef4628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelDuration: 180
-  timerText: {fileID: 1938949579}
-  NxtLvl: ThnxBeta
-  character: {fileID: 586322576}
 --- !u!1001 &252118994
 PrefabInstance:
   m_ObjectHideFlags: 0

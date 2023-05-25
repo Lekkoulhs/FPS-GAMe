@@ -225,6 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 0c0c55d261d864741826015e701cea06, type: 3}
+  secondaryenemy: {fileID: 0}
+  howmanytype1: 0
+  want2types: 0
   delay: 6
 --- !u!4 &263857347
 Transform:
@@ -1751,6 +1754,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 0c0c55d261d864741826015e701cea06, type: 3}
+  secondaryenemy: {fileID: 0}
+  howmanytype1: 0
+  want2types: 0
   delay: 6
 --- !u!1 &1705786741
 GameObject:
@@ -2066,6 +2072,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7265176884984160240, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
       propertyPath: NxtLvl
