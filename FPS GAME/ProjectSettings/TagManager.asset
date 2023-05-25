@@ -18,6 +18,8 @@ TagManager:
   - Wood
   - Enemy
   - Inviz
+  - SkyboxCamera
+  - GGS
   layers:
   - Default
   - TransparentFX
