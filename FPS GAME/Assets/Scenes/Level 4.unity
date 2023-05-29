@@ -992,6 +992,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7265176884984160240, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
       propertyPath: NxtLvl

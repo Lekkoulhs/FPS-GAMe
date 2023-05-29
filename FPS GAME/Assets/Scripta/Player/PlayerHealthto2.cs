@@ -15,6 +15,7 @@ public class PlayerHealthto2 : MonoBehaviour
     public int maxHealth = 100; // Maximum amount of health the player can have
     public int currentHealth; // Current amount of health the player has
 
+    public Animator damageanimator;
    
 
     
@@ -29,6 +30,7 @@ public class PlayerHealthto2 : MonoBehaviour
     {
         currentHealth -= damageAmount;
         Healthtext.text = currentHealth.ToString();
+        damageanimator.SetTrigger("damage");
 
         if (currentHealth <= 0)
         {
@@ -46,4 +48,6 @@ public class PlayerHealthto2 : MonoBehaviour
         SceneManager.LoadScene("Died");
         Destroy(gameObject);
     }
+
+
 }

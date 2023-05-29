@@ -2510,7 +2510,7 @@ PrefabInstance:
     - target: {fileID: 3250834166690910400, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
       propertyPath: enemiestokill
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4009267317592329900, guid: 9d6c56beeb071d44b90ab6e7897dbb67,
         type: 3}
