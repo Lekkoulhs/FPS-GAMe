@@ -4808,7 +4808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  secondaryenemy: {fileID: 3450832807245723595, guid: 137274aecc5a08d4e8f6367443354cd5,
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
     type: 3}
   howmanytype1: 6
   want2types: 1
@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  secondaryenemy: {fileID: 3450832807245723595, guid: 137274aecc5a08d4e8f6367443354cd5,
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
     type: 3}
   howmanytype1: 6
   want2types: 1
@@ -8479,7 +8479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  secondaryenemy: {fileID: 3450832807245723595, guid: 137274aecc5a08d4e8f6367443354cd5,
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
     type: 3}
   howmanytype1: 6
   want2types: 1
@@ -8497,7 +8497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2780099838948611156, guid: 5fc542de43b8c4049b6cc68670d3d2bc, type: 3}
-  secondaryenemy: {fileID: 3450832807245723595, guid: 137274aecc5a08d4e8f6367443354cd5,
+  secondaryenemy: {fileID: 3450832807245723595, guid: af124a31fd3f7724c995c23b3cce28c1,
     type: 3}
   howmanytype1: 6
   want2types: 1
