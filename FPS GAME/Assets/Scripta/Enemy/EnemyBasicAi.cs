@@ -7,6 +7,10 @@ public class EnemyBasicAi : MonoBehaviour
 
 
 {
+  /*  [Header("Reference")]
+    public AudioSource audioSource;
+
+    public AudioClip stepSound;*/
     public Animator anim;
     private NavMeshAgent pathfinder;
     public Transform target;
@@ -21,6 +25,14 @@ public class EnemyBasicAi : MonoBehaviour
     void Update()
     {
         anim.SetBool("IsWalking", true);
+        
         pathfinder.SetDestination(target.position);
+       // PlayWalkingSound();
     }
+
+  /*  public void PlayWalkingSound()
+    {
+        audioSource.pitch = (Random.Range(0.9f, 1.1f));
+        audioSource.PlayOneShot(stepSound, Mathf.Abs(Input.GetAxis("Horizontal") / 10));
+    }*/
 }
