@@ -9562,12 +9562,12 @@ PrefabInstance:
     - target: {fileID: 4384629730539289865, guid: 5cf5254a1491cda4aa6814a97deaf1f3,
         type: 3}
       propertyPath: m_text
-      value: 'Objective: Kill 50 Zombies'
+      value: 'Objective: Kill 40 Zombies'
       objectReference: {fileID: 0}
     - target: {fileID: 6874571690163922382, guid: 5cf5254a1491cda4aa6814a97deaf1f3,
         type: 3}
       propertyPath: zombiesleft
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cf5254a1491cda4aa6814a97deaf1f3, type: 3}
